@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Mar&ccedil;al, J. - Lista Exerc&iacute;cios -
+Filas Circulares</title>
+
+
+</head>
+
+
+<body>
+
+<big style="font-family: Times New Roman,Times,serif; font-weight: bold;"><big>LISTA
+EXERC&Iacute;CIOS: FILAS CIRCULARES</big></big><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+Mar&ccedil;al, J. - ED&nbsp;</span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><small><small>Last
+revision: 15/03/2016</small></small></span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+<br>
+
+<table style="text-align: left; width: 100%; font-family: Times New Roman,Times,serif; font-weight: bold;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td style="width: 510px;"><big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><a href="#ED-L5-001_-_DRIVE_THRU">ED-L5-001</a><br>
+
+      <a href="#ED-L5-002_-_CONTROLE_DE_ENTREGA">ED-L5-002</a></span></big>
+      </td>
+
+      <td style="width: 512px;"><big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"></span></big></td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><big><big>MANIPULA&Ccedil;&Atilde;O
+DE FILAS CIRCULARES (QUEUE)</big></big><br>
+
+</span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+<big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><a name="ED-L5-001_-_DRIVE_THRU"></a>ED-L5-001 - DRIVE
+THRU<br>
+
+</span></big>
+<div style="text-align: justify;"><big><span style="font-family: Times New Roman,Times,serif;">Crie um
+software que ser&aacute; respons&aacute;vel por organizar a
+fila de ve&iacute;culos de um drive thrue capaz de orgnaizar
+at&eacute; 10 ve&iacute;culos, &eacute; importante que a
+estrutura de fila permita adicionar at&eacute; 10
+ve&iacute;culos. Logo abaixo est&atilde;o descritas as
+informa&ccedil;&otilde;es que ser&atilde;o
+necess&aacute;rias armazenar de cada ve&iacute;culo.<br>
+
+<br>
+
+Veiculo {<br>
+
+&nbsp; + Placa;<br>
+
+&nbsp; + NomeMotorista;<br>
+
+&nbsp; + TotalPedido;}<br>
+
+<br>
+
+FilaDriveThru {<br>
+
+&nbsp; + Adicionar(Veiculo); &nbsp;//Adiciona um
+ve&iacute;culo na fila do drive thrue;<br>
+
+&nbsp; + Atender(); // Remove um ve&iacute;culo da fila;<br>
+
+&nbsp; + VeiculosNaFila; //Exibe a placa e nome do motorista dos
+ve&iacute;culos da fila;<br>
+
+&nbsp; + NumeroVeiculosParaAtender(); //Exibe o n&uacute;mero
+de ve&iacute;culos na fila;<br>
+
+&nbsp; + Pesquisar(Placa); //Verifica se um determinado
+ve&iacute;culo est&aacute; na fila a partir da placa; <br>
+
+}<br>
+
+<br>
+
+</span></big><big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"></span></big></div>
+
+<big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+<br>
+
+<a name="ED-L5-002_-_CONTROLE_DE_ENTREGA"></a></span></big><big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;">ED-L5-002 - CONTROLE ENTREGAS</span></big><big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><br>
+
+</span></big>
+<div style="text-align: justify;"><big><span style="font-family: Times New Roman,Times,serif;">A
+empresa
+Logistica S.A. necessita controlar o fluxo de recebimento de cargas por
+ordem de chegada dos caminh&otilde;es, para que esse trabalho seja
+desenvolvido foi necess&aacute;rio a cria&ccedil;&atilde;o
+de um
+sistema que dever&aacute;
+registrar a chegada de cada caminh&atilde;o em ordem e
+dever&aacute;
+chama-lo para
+descarregar quando chegar a vez do mesmo, a area de espera
+n&atilde;o
+&eacute; muito grande e cabe apenas 10 caminh&otilde;es em
+espera.
+Baseado no contexto acima,
+implemente uma Fila utilizando a estrutura abaixo.</span></big><br>
+
+<big><span style="font-family: Times New Roman,Times,serif;"></span></big></div>
+
+<big><span style="font-family: Times New Roman,Times,serif;"><br>
+
+Caminhao {<br>
+
+&nbsp; + Placa;<br>
+
+&nbsp; + Marca;<br>
+
+&nbsp; + PesoTotal;<br>
+
+&nbsp; + NumeroCaixas;}<br>
+
+<br>
+
+FilaCaminhoes {<br>
+
+&nbsp;&nbsp;&nbsp; + Chegada (Caminaho); //Adiciona na fila
+de espera para descarregar.<br>
+
+&nbsp; &nbsp; + Descarregar(); //Chama o caminh&atilde;o
+para descarregar e o retira da fila de espera.<br>
+
+&nbsp; &nbsp; + PatioCheio(): Boolean; //Retorna True se o
+p&aacute;tio estiver cheio e False se ainda existir
+espa&ccedil;o;<br>
+
+&nbsp; &nbsp; + Pesquisar(Placa); //Verifica atrav&eacute;s
+da placa se
+um determinado caminh&atilde;o est&aacute; na fila de espera;<br>
+
+&nbsp; &nbsp; + MaisPesado(); //Exibe os dados do
+caminh&atilde;o mais pesado;<br>
+
+&nbsp; &nbsp; + PesoTotalPatioEspera(); //Exibe a soma dos
+pesos de todos caminh&otilde;es no p&aacute;tio de espera; <br>
+
+&nbsp; &nbsp; + MenorNumeroCaixas(); Exibe os dados do
+caminh&atilde;o que cont&eacute;m o menor n&uacute;mero de
+caixas;<br>
+
+&nbsp; &nbsp; + NumeroCaminhoesEspera(); //Retorna o
+n&uacute;mero de
+caminh&otilde;es que est&atilde;o em espera.&nbsp;
+&nbsp; &nbsp; <br>
+
+}<br>
+
+</span></big><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"></span>
+</body>
+</html>

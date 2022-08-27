@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Mar&ccedil;al, J. - Lista Exercicios - Listas Ligadas</title>
+</head>
+
+
+<body bgcolor="#dfbe54">
+<big style="font-family: Times New Roman,Times,serif; font-weight: bold;"><big>LISTA
+EXERC&Iacute;CIOS - Listas Duplamente Ligadas</big></big><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+Mar&ccedil;al, J. - ED</span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+
+
+
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><small><small>Last
+revision: 25/04/2019</small></small></span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+
+
+
+
+<br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+
+
+
+
+<table style="text-align: left; width: 100%; font-family: Times New Roman,Times,serif; font-weight: bold;" border="1" cellpadding="2" cellspacing="2">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td style="width: 510px;"><a href="#EDL6-001_LIVROS">EDL6-001</a><br>
+
+
+      <a href="#EDL6-002_FILA_BANCO">EDL6-002</a><br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+      <td style="width: 512px;"><br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+
+
+
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><big><big>MANIPULA&Ccedil;&Atilde;O
+DE LISTAS LIGADAS</big></big><br>
+
+
+
+
+
+
+</span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+
+
+
+
+<big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><a name="EDL6-001_LIVROS"></a>EDL6-001 (LIVROS)<br>
+
+
+
+
+
+
+</span><span style="font-family: Times New Roman,Times,serif;">Com
+base
+nas informa&ccedil;&otilde;es abaixo, crie uma
+aplica&ccedil;&atilde;o
+console que dever&aacute; implementar os conceitos de uma Lista
+Duplamente Ligada (LDL), onde cada elemento contem uma refer&ecirc;ncia
+para
+o anterior e o prox&iacute;mo, note que trata-se de um sistema de
+livros. Utilize para a implementa&ccedil;&atilde;o a
+cria&ccedil;&atilde;o de m&eacute;todos (Tipos de Dados Abstratos -
+TDA) para resolu&ccedil;&atilde;o de cada opera&ccedil;&atilde;o. <br>
+<br>
+No exemplo abaixo o c&oacute;digo do livro &eacute; o indentificador
+&uacute;nico de cada livro e a classifica&ccedil;&atilde;o corresponde
+a Infantil, Adulto, Suspense, Romance, etc. Poder&aacute; ser utilizado
+um valor textual ou num&eacute;rico para controle.<br>
+</span><span style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+
+
+
+<br>
+
+
+
+
+</span><span style="font-family: Courier New;">A) Estrutura do elemento (TDE).<br>
+</span><span style="font-weight: bold; font-family: Courier New;">
+
+
+
+
+
+</span><span style="font-family: Courier New;">Livro
+{<br>
+
+
+
+
+
+
+&nbsp; + codigo: Inteiro<br>
+
+
+
+
+
+
+&nbsp; + nome: Texto<br>
+
+
+
+&nbsp; + classificacao: Texto ou Inteiro<br>
+
+
+
+
+
+
+&nbsp; + preco: Numerico<br>
+<br>
+
+
+
+
+&nbsp; + anterior: Livro<br>
+
+
+
+&nbsp; + proximo: Livro}<br>
+
+
+
+
+
+
+<br>
+
+
+
+
+</span></big><big style="font-family: Courier New;"><span style="font-weight: bold;"></span></big><big style="font-family: Courier New;">B) Menu.</big><br style="font-family: Courier New;">
+
+
+
+
+<big><span style="font-weight: bold; font-family: Courier New;">
+
+</span><big style="font-weight: bold; font-family: Courier New;">
+</big><big style="font-family: Times New Roman,Times,serif;">
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.1 Adicionar Inicio (Livro);</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.2 Adicionar Final (Livro);</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.3
+Adicionar Ap&oacute;s C&oacute;digo (Codigo, Livro); //Adiciona o novo
+livro ap&oacute;s o livro que contiver o c&oacute;digo informado.&nbsp;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.4 Adicionar Antes C&oacute;digo (Codigo, Livro); //Idem ao item b.3, no entanto adicioa antes.</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.5 Remover Inicio</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.6 Remover Final</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.7 Remover C&oacute;digo (Codigo) //Remove o livro que contiver o c&oacute;digo informado.&nbsp;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.8 Pesquisar C&oacute;digo (C&oacute;digo);</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.9 Imprimir IF; //Imprime todos os livros a partir do primeiro at&eacute; o ultimo.</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.10 Imprimir FI; //Imprime todos os livros a partir do final para o in&iacute;cio;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.11 Contar N&uacute;mero Livros;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.12 Maior Pre&ccedil;o;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.13 M&eacute;dia Pre&ccedil;os;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.14
+Contar N&uacute;mero Classifica&ccedil;&atilde;o(Classificacao);
+//Conta o n&uacute;mero de livros existentes de uma determinada
+classfica&ccedil;&atilde;o informada pelo usu&aacute;rio;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.15
+Imprimir N&uacute;mero por Classifica&ccedil;&atilde;o; //Neste caso,
+dever&aacute; percorrer a estrutura, verificar quais
+classifica&ccedil;&otilde;es existem, e depois exibir o n&uacute;mero
+de livros de cada classifica&ccedil;&atilde;o, note que o
+usu&aacute;rio n&atilde;o informa a classifa&ccedil;&atilde;o desejada.</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.16 Imprimir Soma por Classifica&ccedil;&atilde;o; //Idem ao item b.15.</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.17
+Remover Livros Classifica&ccedil;&atilde;o
+(Classifica&ccedil;&atilde;o); //Dever&aacute; remover todos os livros
+de uma determianda classifica&ccedil;&atilde;o informada pelo
+usu&aacute;rio;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.18
+Classifica&ccedil;&atilde;o com maior N&uacute;mero de livros;
+//Dever&aacute; exbir a classifica&ccedil;&atilde;o que contem a maior
+quantidade de livros;</small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>b.19
+Imprimir ordenados por C&oacute;digo; //Dever&aacute; exibir todos
+&nbsp;os livros ordenados a partir de seus c&oacute;digos. Para
+codificar a solicita&ccedil;&atilde;o existem v&aacute;rias
+t&eacute;cnicas, desde ordenar a lista propriamente dito, como criar
+uma lista auxiliar e adicionar os elementos da lista principal nesta
+lista ordenada e/ou at&eacute; mesmo criar um vetor e adicionar os
+valores e ordenar no vetor e exibi-lo.</small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small></small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small></small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small></small></small></span></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small><a name="EDL6-002_FILA_BANCO"></a><span style="font-weight: bold; font-family: Times New Roman;">EDL6-002 (FILA BANCO)</span></small></small></span></big></p>
+
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify; font-family: Times New Roman;" dir="ltr"><big><small><small>O
+banco COFRINHO SA ir&aacute; implementar em uma de suas ag&ecirc;ncias
+o "Super Atendimento", para tal o banco solicitou a
+cria&ccedil;&atilde;o de um software que ser&aacute; respons&aacute;vel
+pelo controle da fila de espera. O software ir&aacute; permitir a
+inclus&atilde;o e remo&ccedil;&atilde;o de clientes em v&aacute;rias
+posi&ccedil;&otilde;es da fila, permitir&aacute; ainda a pesquisa de
+clientes presentes na fila e in&uacute;meras formas de impress&atilde;o
+de informa&ccedil;&otilde;es sobre os clientes presentes na fila.</small></small></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify; font-family: Times New Roman;" dir="ltr"><big><small><small></small></small></big></p>
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><small><small>Baseado
+no cen&aacute;rio acima o programador ter&aacute; que desenvolver o
+software baseado nas especifica&ccedil;&otilde;es abaixo.</small></small></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>Cada CLIENTE dever&aacute; conter as informa&ccedil;&otilde;es abaixo:&nbsp;</small></small></span></big></p>
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>+ CPF*;</small></small></span></big></p>
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>+ AGENCIA;</small></small></span></big></p>
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>+ CONTA;</small></small></span></big></p>
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>+ TIPO DE ATENDIMENTO**;</small></small></span></big></p>
+
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>+ NOME DO CLIENTE;</small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small></small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>ONDE:</small></small></span></big></p>
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>*
+O campo CPF dever&aacute; ser &uacute;nico na fila, isso implica que
+antes de cada inser&ccedil;&atilde;o dever&aacute; ser verificado
+primeiramente se n&atilde;o existe outro cliente na fila com o mesmo
+CPF.</small></small></span></big></p>
+
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>**
+O campo TIPO DE ATENDIMENTO determina o tipo de atendimento desejado
+pelo cliente, este campo pode receber os valores DEPOSITO, PAGTO, SAQUE.</small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small></small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>OP&Ccedil;&Otilde;ES DO SISTEMA:</small></small></span></big></p>
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>1) Adicionar cliente no in&iacute;cio;<br>
+
+
+2) Adicionar cliente no final;<br>
+
+
+3) Adicionar cliente ap&oacute;s CPF <br>
+
+
+4) Remover cliente inicio;<br>
+
+
+5) Remover cliente final;<br>
+
+
+6) Revemor cliente CPF;<br>
+
+
+7) Imprimir clientes -&gt;<br>
+
+
+8) Imprimir cliente &lt;-<br>
+
+
+9) Imprimir clientes Tipo Atendimento ^<br>
+
+
+10) Localizar cliente CPF<br>
+
+
+11) Numero clientes na fila<br>
+
+
+12) Numero clientes atendidos ^^<br>
+
+
+13) Numero clientes inclusos ^^^<br>
+
+
+14) Imprimir vizinhos CPF ^^^^</small></small></span></big></p>
+
+
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>15) Clientes por tipo de atendimento ^^^^^</small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small></small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small></small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>ONDE:</small></small></span></big></p>
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>^
+Ao utilizar esta opcao, o usuario deve informar um tipo qualquer de
+atendimento, e entao o programa devera imprimir o nome de todos os
+clientes que estao na fila e tem o mesmo tipo de atendimento.<br>
+
+
+^^ Corresponde ao numero de clientes que foram retiradado da fila,
+recomendo a criacao de um contador dentro da classe responsavel pelas
+operacoes e a cada remocao, este contador e incrementado.<br>
+
+
+^^^ Corresponde ao numero de clientes que foram adicionados desde o
+inicio do processamento, atencao, pois esta informacao nao corresponde
+aos clientes presentes na fila.<br>
+
+
+^^^^ Deve-se localizar o cliente referente ao CPF informado, apos
+localizadolo, deve imprimir o nome do cliente anterior e posterior ao
+localizado. Atencao, pois caso o cliente esteja no inicio ou final, ele
+nao tera um de seus vizinhos.</small></small></span></big></p>
+
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>^^^^^ Deve exibir um relat&oacute;rio informando o n&uacute;mero de clientes presentes na fila para cada tipo de atendimento.</small></small></span></big></p>
+
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small></small></small></span></big></p>
+
+
+</big></big>
+</body>
+</html>

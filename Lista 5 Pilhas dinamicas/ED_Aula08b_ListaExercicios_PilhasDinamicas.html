@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+  <title>Mar&ccedil;al, J. - Lista Exercicios - Listas Ligadas</title>
+</head>
+
+
+<body>
+
+
+<big style="font-family: Times New Roman,Times,serif; font-weight: bold;"><big>LISTA
+EXERC&Iacute;CIOS - Listas Ligadas (Pilhas)</big></big><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+Mar&ccedil;al, J. - ED</span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><small><small>Last
+revision: 07/03/2016</small></small></span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+<br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+<table style="text-align: left; width: 100%; font-family: Times New Roman,Times,serif; font-weight: bold;" border="1" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="width: 510px;"><a href="#EDL6-001_LIVROS">EDL6-001</a><br>
+      <a href="#EDL6-002_CARTAS">
+
+EDL6-002</a><br>
+
+
+      </td>
+
+
+      <td style="width: 512px;"><br>
+
+
+      <br>
+
+
+      </td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><big><big>MANIPULA&Ccedil;&Atilde;O
+DE PILHAS/STACK (Listas Ligadas)</big></big><br>
+
+
+</span><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+<big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><a name="EDL6-001_LIVROS"></a>EDL6-001 (LIVROS)<br>
+
+
+</span><span style="font-family: Times New Roman,Times,serif;">Com
+base
+nas informa&ccedil;&otilde;es abaixo, crie uma
+aplica&ccedil;&atilde;o
+console que dever&aacute; implementar os conceitos de uma Pilha, esta
+aplica&ccedil;&atilde;o dever&aacute; utilizar os conceitos de lista
+ligada para implementa&ccedil;&atilde;o da PilhaLivros. </span><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><br>
+
+
+<br>
+</span><span style="font-family: Courier New;">a) Estrutura do elemento (TDE).</span><span style="font-weight: bold; font-family: Courier New;"><br>
+
+
+</span><span style="font-family: Courier New;">Livro
+{<br>
+
+
+&nbsp; + codigo: Inteiro<br>
+
+
+&nbsp; + titulo: Texto<br>
+
+
+&nbsp; + preco: Numerico<br>
+&nbsp; + anterior: Livro}<br>
+
+
+<br>
+</span></big><big style="font-family: Courier New;">b) Estrutura da pilha (TDA)</big><br style="font-family: Courier New;">
+<big style="font-family: Courier New;">
+
+PilhaLivros {<br>
+&nbsp; + Empilhar(Livro novo);<br>
+
+
+&nbsp; + Desempilhar();<br>
+
+
+&nbsp; + Imprimir();<br>
+&nbsp; + Vazia(): Boolean //Retorna valor verdadeiro ou falso, informando se a pilha est&aacute; fazia ou n&atilde;o.<br>
+&nbsp; + Pesquisar(Inteiro codigo); //Pesquisa se um determinado livro existe na pilha a partir de um c&oacute;digo informato.<br>
+&nbsp; + MaisCaro(); //Exibibe as informa&ccedil;&otilde;es
+(c&oacute;digo, t&iacute;tulo e pre&ccedil;o) do livro mais caro que
+existe na pilha.<br>
+&nbsp; + MediaPreco(); &nbsp;//Exibe a m&eacute;dia de pre&ccedil;os dos livros presentes na pilha.<br>
+&nbsp; + NumeroTotalLivros(); Exibe o n&uacute;mero de livros da pilha.<br>
+}<span style="font-weight: bold;"><br>
+
+
+<br>
+</span></big><big style="font-family: Courier New;">c) Menu.</big><br style="font-family: Courier New;">
+<big><span style="font-weight: bold; font-family: Courier New;">
+
+</span><big style="font-weight: bold; font-family: Courier New;">
+</big><big style="font-family: Times New Roman,Times,serif;">
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; text-align: justify;" dir="ltr"><big><span style="font-family: Times New Roman,Times,serif;"><small style="font-family: Courier New;"><small>Crie um menu para utilizar as opera&ccedil;&otilde;es descritas no TDA.</small></small><br>
+</span></big></p>
+</big></big><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><br>
+
+
+</span><big><span style="font-family: Times New Roman,Times,serif; font-weight: bold;"><a name="EDL6-002_CARTAS"></a>EDL6-002 (CARTAS)</span></big><span style="font-family: Times New Roman,Times,serif;"></span><br>
+
+
+<div style="text-align: justify;"><big><span style="font-family: Times New Roman,Times,serif;">Crie
+uma aplica&ccedil;&atilde;o console que deve utilizar os
+conceitos de
+Pilhas (com aux&iacute;lio listas ligadas), abaixo seguem as
+instru&ccedil;&otilde;es referentes os elementos da Pilha e
+tamb&eacute;m quais opera&ccedil;&otilde;es poder&atilde;o ser
+executadas na Pilha,.<br>
+<br>
+<span style="font-family: Courier New;">a) Elemento carta de baralho (TDA).</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">Carta {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp;&nbsp;+ naipe: Texto;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp; + valor: Inteiro;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp; + anterior: Carta;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">}</span></span></big><span style="font-weight: bold; font-family: Courier New;"></span></div>
+
+
+<span style="font-weight: bold; font-family: Courier New;"><br>
+<br>
+</span><big style="font-family: Courier New;">b) Pilha para controle das cartas (TDE).<br>
+PilhaCartas{<br>
+&nbsp; + PilhaCartas (Inteiro tamanho); // M&eacute;todo construtor,
+note que existe um parametro que definir&aacute; a quantidade de cartas
+que poder&atilde;o ser adicionadas na pilha;<br>
+&nbsp; + Jogar(Carta nova); //Equivale ao m&eacute;todo empilhar, no
+entanto deve-se respeitar as seguintes regras:&nbsp;1. N&atilde;o deve
+permitir jogar a carta caso o n&uacute;mero de cartas ultrapasse o
+permitido no momento da cria&ccedil;&atilde;o da Pilha; 2. N&atilde;o
+deve permitir que seja jogada uma carta igual, pois em um baralho
+n&atilde;o exitem cartas repetidas;<br>
+</big><big style="font-family: Courier New;">&nbsp; + Descartar(); //Equivalente ao m&eacute;todo desempilhar;<br>
+&nbsp; + Monte(); //Exibe o naipe e valor de cada carta jogada;<br>
+</big><big style="font-family: Courier New;">&nbsp; + Contar(); // Exibe o n&uacute;mero de cartas jogadas;<br>
+&nbsp; + ContarPorNaipe(); //Deve exibir o n&uacute;mero de cartas por naipe, dentre as cartas jogadas; <br>
+&nbsp; + Pesquisar (Texto naipe, Inteiro valor) //Pesquisa se uma
+determinada carta foi jogada, &eacute; importante notar que a
+condi&ccedil;&atilde;o leva em considera&ccedil;&atilde;o dois itens, o
+naipe e o valor da carta, pois existem cartas com o mesmo n&uacute;mero
+mas de naipes diferentes;<br>
+</big><big style="font-family: Courier New;">&nbsp; + Total(Texto
+naipe); Deve exibir a soma dos valores das cartas jogadas de um
+determinado naipe informado pelo usu&aacute;rio; <br>
+</big><big style="font-family: Courier New;">&nbsp; + TotalPorNaipe();
+Deve exibir a soma de todos os valores por naipe das cartas jogadas.
+Por exemplo: Paus - 35; Copas - 28, etc. <br>
+&nbsp; + Menor (Texto naipe); Exibe a menor carta jogada de um determinado naipe informado;<br>
+&nbsp; + MenorPorNaipe(); Deve exibir a menor carta jogada por naipe;<br>
+&nbsp; + MaiorCarta(); //Deve exibir a maior carta e seu respectivo naipe, dentre as cartas jogadas.</big><big><span style="font-family: Courier;"></span></big><br style="font-family: Times New Roman,Times,serif; font-weight: bold;">
+
+
+<span style="font-family: Times New Roman,Times,serif; font-weight: bold;"></span>
+</body>
+</html>

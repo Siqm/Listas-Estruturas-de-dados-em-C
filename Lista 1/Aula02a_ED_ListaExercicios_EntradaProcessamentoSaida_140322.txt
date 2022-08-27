@@ -1,0 +1,394 @@
+ESTRUTUDA DE DADOS
+MARÇAL
+
+LISTA EXERCÍCIOS 1
+- Entrada, Processamento e Saída.
+- Comandos condicionais.
+
+ED-L1-EX01 [MAIOR, MENOR, IGUAIS]
+Desenvolva um algoritmo que solicite do usuário 2 valores numéricos quaisquer, a aplicação deverá exibir se os valores são iguais, se o primeiro é maior que o segundo, ou se o segundo é maior que o terceiro. 
+#include <locale.h>
+#include <stdio.h>
+
+void main (int argc, char *argv) {
+	setlocale(LC_ALL, "");
+	float n1, n2;
+	
+	printf("Insira o primeiro número: ");
+	scanf("%f", &n1);
+	printf("Insira o segundo número: ");
+	scanf("%f", &n2);
+	
+	if (n1 > n2) {
+		printf("O primeiro valor é maior que o segundo");
+	} else if (n2 > n1) {
+		printf("O segundo valor é maior que o primeiro");
+	} else {
+		printf("Os valores são iguais");
+	}
+}
+
+ED-L1-EX02 [ÁREA RETANGULO]
+Desenvolva um algoritmo capaz de informar qual é a área de um retângulo, o usuário deverá informar os valores de base e altura. 
+#include <locale.h>
+#include <stdio.h>
+
+int main (int argc, char *argv) {
+	setlocale(LC_ALL, "");
+	
+	float base, altura, area;
+	
+	printf("Insira a altura da base do retangulo: ");
+	scanf("%f", &base);
+	printf("Insira a altura da altura do retangulo: ");
+	scanf("%f", &altura);
+	
+	area = base * altura;
+	printf("A area é de: %f", area);
+	return 0;
+}
+
+
+ED-L1-EX03 [ORDENAR 3 VALORES]
+Desenvolva um algoritmo que solicite o usuário 3 valores inteiros quaisquer, este algoritmo deverá exibir os valores ordenados ascendente indiferentemente da ordem que o usuário informar os valores, esta ordenação deverá ocorrer somente se não existir nenhum valor repetido, caso exista informar ao usuário que valores repetidos não são permitidos.
+
+#include <locale.h>
+#include <stdio.h>
+
+void pedenumero(int num[]) {
+	int i;
+	
+	for (i=0; i<3; i++){
+		printf("Insira um valor para o numero %i: ", i+1);
+		scanf("%i", &num[i]);
+	}
+	if (num[0] == num[1] || num[2]) {
+		pedenumero(num);
+	}
+}
+
+int main (int argc, char *argv) {
+	setlocale(LC_ALL, "");
+	
+	int numeros[3], i;
+	
+	
+	pedenumero(numeros);
+	
+	
+	return 0;
+}
+
+
+ED-L1-EX04 [MÉDIA ESCOLAR]
+Desenvolva um algoritmo que permita calcular a média final de um aluno, o cálculo será mf = p1 + p2 + tr, sendo que p1 terá peso 40%, p2 peso 40% e tr peso de 20%, o algoritmo deverá receber as informações de p1, p2, tr e nc (nota de corte) e ao final exibir se o aluno foi aprovado (mf > nc) ou reprovado (mf < nc). 
+#include <stdio.h>
+#include <locale.h>
+
+int main (int argc, char *argv) {
+	setlocale (LC_ALL, "");
+	
+	float media, p1, p2, tr, nc;
+	
+	printf("Insira a nota de corte: ");
+	scanf("%f", &nc);
+	printf("Insira a nota da p1: ");
+	scanf("%f", &p1);
+	printf("Insira a nota da p2: ");
+	scanf("%f", &p2);
+	printf("Insira a nota da tr: ");
+	scanf("%f", &tr);
+	
+	media = (p1 * 0.4) + (p2 * 0.4) + (tr * 0.2);
+	
+	if (media >= nc) {
+		printf("Parabéns, você foi aprovado!");
+	} else {
+		printf("Sinto muito, você foi reprovado!");
+	}
+	getchar ();
+	getchar ();
+	return 0;
+}
+
+
+ED-L1-EX05 [ELEIÇÕES]
+Crie um programa que solicite do usuário o número de eleitores que votaram brancos, nulos e votos válidos, calcule o percentual que representa cada um dos valores informados e exiba o resultado (percentuais).
+#include <stdio.h>
+#include <locale.h>
+
+int main (int argc, char *argv) {
+	setlocale (LC_ALL, "");
+	
+	int branco, nulo, valido;
+	float total;
+	
+	printf("Insira a quantidade de votos em branco: ");
+	scanf("%i", &branco);
+	printf("Insira a quantidade de votos nulos: ");
+	scanf("%i", &nulo);
+	printf("Insira a quantidade de votos válidos: ");
+	scanf("%i", &valido);
+	total = branco + nulo + valido;
+	
+	printf("A porcentagem de votos em branco foram de: %.1f\n", (branco*100)/total);
+	printf("A porcentagem de votos nulos foram de: %.1f\n", (nulo*100)/total);
+	printf("A porcentagem de votos válidos foram de: %.1f", (valido*100)/total);
+	getchar ();
+}
+
+ED-L1-EX06 [PREÇO VENDA VEÍCULO]
+Crie um algoritmo que irá CALCULAR O PREÇO FINAL DE VENDA um veículo, este algoritmo deverá adicionar os impostos e também margem de lucro sobre o valor de fábrica do veículo, o algoritmo deverá solicitar o ANO de fabricação do veículo, o preço de fábrica e então acrescentar os impostos de acordo com as regras abaixo e também o percentual de lucro, o preço final deverá estar acrescido dos itens mencionados. No final do processamento, a aplicação deverá exibir o valor original, o valor referente a cada imposto e também o valor de lucro, e por fim, deverá exibir o preço final que correspondo ao preço original mais os itens calculados. Observação: Todos os valores deverão ser calculados sobre o preço original do veículo.
+
+IPI 
+veículos ano <= 2000 = 10% 
+veículos ano > 2000 e ano <= 2010 = 11%
+veículos ano > 2011 = 13%
+
+ICMS
+veículos ano <= 2000 = 5 %
+veículos ano >  2000 = 7%
+
+LUCRO
+veículos ano <= 2000 = 25% 
+veículos ano  > 2000 = 20%
+
+#include <stdio.h>
+#include <locale.h>
+
+void calculaTaxas (int ano, float porcentagem[]) {
+	// O método tem o intuito de calcular todas as taxas baseadas em ano de veículo e apontar para o array
+	// do tipo float declarado no main, respeitando as posições IPI, ICMS e LUCRO (consultar método main)
+	
+	// carros fabricados até ano 2000:
+	if (ano <= 2000) {
+		porcentagem[0] = 0.1;
+		porcentagem[1] = 0.05;
+		porcentagem[2] = 0.25;
+	}
+	// carros fabricados depois de 2000 até 2010:
+	else if (ano > 2000) {
+		porcentagem[1] = 0.07;
+		porcentagem[2] = 0.2;
+		
+		// Posição 0 só será referenciado se o ano do veículo for até 2010, caso contrário entrará no prox if:
+		if (ano <= 2010) {
+			porcentagem[0] = 0.11;
+		}//carros fábricados depois de 2011
+		else if(ano >= 2011) {
+			porcentagem[0] = 0.13;
+		}
+	}
+	
+}
+
+int main (int argc, char *argv) {
+	setlocale (LC_ALL, "");
+	
+	int anoFab;
+	float precoFinal, lucro, ipi, icms, valorFab, taxas[3];
+	
+	// O array do tipo float taxas[] deve ser acessado em cada posição com valores respectivos a:
+	// Posição 0: IPI
+	// Posição 1: ICMS
+	// Posição 2: LUCRO
+	
+	//Entrada de dados:
+	printf("Insira o ano de Fabricação: ");
+	scanf("%i", &anoFab);
+	printf("Insira o preço de fábrica: ");
+	scanf("%f", &valorFab);
+	
+	//Processamento de taxas:
+	calculaTaxas(anoFab, taxas);
+	
+	//Processamento de saídas:
+	ipi = (taxas[0] * valorFab);
+	icms = (taxas[1] * valorFab);
+	lucro = (taxas[2] * valorFab);
+	precoFinal = ipi + icms + lucro + valorFab;
+	
+	//Saídas:
+	printf("Valor original:	R$ %.2f\n", valorFab);
+	printf("Valor IPI:	R$ %.2f\n", ipi);
+	printf("Valor ICMS:	R$ %.2f\n", icms);
+	printf("Valor de lucro:	R$ %.2f\n", lucro);
+	printf("------------------------------\n");
+	printf("Valor total:	R$ %.2f", precoFinal);
+}
+ 
+
+ED-L1-EX07 [FEIRA]
+Crie um algoritmo que irá calcular o valor total que uma senhora irá pagar por seus produtos em uma feira baseado no valor dos itens abaixo, considere que ela irá comprar uma quantidade X de cada item ao final deverá apresentar o resultado.
+
+Pera até 5 unidades: R$ 1,50, acima de 5 R$ 1,20
+Alface até 2 unidades: R$ 2,00, acima de 2 R$ 1,50
+Laranjas até 6 unidades: R$ 0,50, acima de 6 R$ 0,40
+#include <locale.h>
+#include <stdio.h>
+
+void main (int argc, char *argv) {
+	setlocale (LC_ALL,"");
+	
+	int pera, alface, laranja;
+	float precoPera, precoAlface, precoLaranja, total;
+	
+	printf("\t\t\t* Insira a quantidade de produtos comprados *\n");
+	printf("Insira a quantidade de Peras: ");
+	scanf("%i", &pera);
+	printf("Insira a quantidade de pés de Alface: ");
+	scanf("%i", &alface);
+	printf("Insira a quantidade de laranjas: ");
+	scanf("%i", &laranja);
+	
+	if (pera <= 5) {
+		precoPera = 1.5;
+	} else {
+		precoPera = 1.2;
+	}
+	if (alface <= 2) {
+		precoAlface = 2;
+	} else {
+		precoAlface = 1.5;
+	}
+	if (laranja <= 6) {
+		precoLaranja = 0.5;
+	} else {
+		precoLaranja = 0.4;
+	}
+	
+	total = precoLaranja * laranja + precoAlface * alface + precoPera * pera;
+	printf("O total da compra é de R$%.2f", total);
+}
+
+
+ED-L1-EX08 [COMBUSTÍVEL]
+Crie um algoritmo que irá calcular o valor total a ser pago na compra de combustível levando em consideração que o preço do álcool comprado acima de 20 litros tem desconto de 3% e acima 40 litros desconto de 5% por litro e que a gasolina comprando acima de 15 litros terá 3% de desconto e acima de 35 litros 6% de desconto.
+#include <locale.h>
+#include <stdio.h>
+
+float descontoGasolina (int lt) {
+	
+	if (lt > 15) {
+		return 0.03;
+	} else if (lt > 35) {
+		return 0.06;
+	}
+}
+
+float descontoAlcool (int lt) {
+	
+	if (lt > 20) {
+		return 0.03;
+	} else if (lt > 40) {
+		return 0.05;
+	}
+}
+
+
+void main (int argc, char *argv) {
+	setlocale (LC_ALL,"");
+	
+	int litros, liquido;
+	float desconto, total;
+	
+	printf("Preço gasolina: R$3,00 lt \tPreço alcool: R$2,00 lt\n");
+	printf("Para selecionar gasolina insira 1\n");
+	printf("Para selecionar alcool insira 2\n");
+	printf("Escolha: ");
+	scanf("%i", &liquido);
+	printf("Insira a quantidade em litros: ");
+	scanf("%i", &litros);
+	
+	if (liquido == 1) {
+		
+		desconto = descontoGasolina(litros);
+		total = (litros * 3) - (litros * 3) * desconto;
+	} else {
+		
+		desconto = descontoAlcool(litros);
+		total = (litros * 2) - (litros * 2) * desconto;
+	}
+	
+
+	
+	printf("O total a ser pago é de R$%.2f, o desconto aplicado foi de %.0f%%", total, desconto*100);
+}
+
+álcool comprado acima de 20 litros terá 3%
+álcool comprado acima de 40 litros terá 5%
+
+gasolina comprando acima de 15 litros terá 3% 
+gasolina comprando acima de 35 litros terá 6%
+
+ED-L1-EX09 [IMC]
+Crie uma aplicação que calcula o IMC, a aplicação deverá solicitar o Peso e a Altura, e apresentar o resultado da operação.
+#include <locale.h>
+#include <stdio.h>
+
+void main (int argc, char *argv) {
+	setlocale (LC_ALL,"");
+	
+	float altura, peso, imc;
+	
+	printf("Insira sua altura: ");
+	scanf("%f", &altura);
+	printf("Insira seu peso: ");
+	scanf("%f", &peso);
+	
+	imc = peso / (altura*altura);
+	printf("Seu IMC é de %f", imc);
+}
+
+
+
+ED-L1-EX10 [Juros mensalidade]
+Crie uma aplicação que deverá calcular o novo valor da menslidade, a aplicação deverá solicitar do usuário o valor da mensalidade e também o dia em que ele deseja realizar o pagamento. Baseado nestas informações, caso o dia de pagamento esteja entre os dias 1~5 não deverá ocorrer nenhum ajuste de valor, se o dia de pagamento estiver entre 6~10 deverá ser calculado um acrescimo de 5% e se o dia estiver entre 11~20 deverá calcular 8%, e por fim, se o dia estiver entre 21~31 deverá ser calculado 10% de juros. A aplicação deverá apresentar no final do processamento, o valor original, o valor correspondente ao juros e também o valor final acrescido dos juros.
+#include <locale.h>
+#include <stdio.h>
+// aplicação deverá solicitar do usuário o valor da mensalidade e também o dia em que ele deseja realizar o pagamento.
+//1~5 não deverá ocorrer nenhum ajuste de valor
+//6~10 acrescimo 5%
+//11~20 acrescimo 8%
+//21~31 acrescimo 10% 
+//apresentar o valor original, o valor correspondente ao juros e também o valor final (valor original + juros)
+
+float calculaJuros(int dia) {
+	if (dia <= 5) {
+		
+		return 0;
+	} else if (dia <=10) {
+		
+		return 0.05;
+	} else if (dia <= 20) {
+		
+		return 0.08;
+	} else if (dia <= 31) {
+		
+		return 0.1;
+	} else {
+		
+		printf("Dia do mês inválido\n");
+		return 0;
+	}
+}
+
+void main (int argc, char *argv) {
+	setlocale (LC_ALL,"");
+	
+	float mensalidade, juros, total;
+	int diaPgto;
+	
+	printf("Insira o valor da mensalidade: ");
+	scanf("%f", &mensalidade);
+	printf("Em qual dia do mês deseja pagar: ");
+	scanf("%i", &diaPgto);
+	
+	juros = calculaJuros(diaPgto);
+	total = mensalidade + mensalidade * juros;
+	
+	printf("O valor original é de R$%.2f\n", mensalidade);
+	printf("O valor do juros é de R$%.2f\n", juros*100);
+	printf("O valor com o juros aplicado é de R$%.2f\n", total);
+	
+}
